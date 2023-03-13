@@ -1,2 +1,2 @@
 #!/bin/bash
-uniq -c bin /etc/passwd
+uniq -c -i bin /etc/passwd
