@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+file=/etc/passwd
+while IFS=":" read -r username _ userid _ home _;
+do
+	echo "$username:$userid:$home"
+done < "$file"
