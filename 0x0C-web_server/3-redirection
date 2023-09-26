@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Install nginx web server /Redirection
+apt-get update -y
+apt-get install nginx -y
+echo "Hello World!" > /var/www/html/index.html
+sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://github.com/EslamAlawamy permanent;" /etc/nginx/sites-enabled/default
+service nginx start
