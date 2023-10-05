@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 #Fixing issues in a container
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-pkill -1 nginx
+cp -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+echo '9791' | sudo tee /run/nginx.pid
