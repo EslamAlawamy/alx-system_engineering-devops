@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 #Fixing issues in a container
-cp -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 pkill -1 nginx
