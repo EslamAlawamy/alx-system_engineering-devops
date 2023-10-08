@@ -7,5 +7,5 @@ frontend lb-01
 backend webservers
     mode http
     balance roundrobin
-    server 377545-web-01 34.229.67.142:80
-    server 377545-web-02 100.25.16.138:80
+    server 17272-web-01 44.200.83.158:80
+    server 17272-web-02 3.237.16.226:80
